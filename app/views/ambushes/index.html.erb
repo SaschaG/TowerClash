@@ -1,0 +1,21 @@
+<h1>Listing ambushes</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ambushes.each do |ambush| %>
+  <tr>
+    <td><%= link_to 'Show', ambush %></td>
+    <td><%= link_to 'Edit', edit_ambush_path(ambush) %></td>
+    <td><%= link_to 'Destroy', ambush, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ambush', new_ambush_path %>

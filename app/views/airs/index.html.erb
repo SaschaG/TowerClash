@@ -1,0 +1,27 @@
+<h1>Listing airs</h1>
+
+<table>
+  <tr>
+    <th>Dmg</th>
+    <th>Rate</th>
+    <th>Boni</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @airs.each do |air| %>
+  <tr>
+    <td><%= air.dmg %></td>
+    <td><%= air.rate %></td>
+    <td><%= air.boni %></td>
+    <td><%= link_to 'Show', air %></td>
+    <td><%= link_to 'Edit', edit_air_path(air) %></td>
+    <td><%= link_to 'Destroy', air, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Air', new_air_path %>

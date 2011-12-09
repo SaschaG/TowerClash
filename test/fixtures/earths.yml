@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  dmg: 1
+  rate: 1
+  boni: 1
+
+two:
+  dmg: 1
+  rate: 1
+  boni: 1

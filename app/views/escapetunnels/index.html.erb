@@ -1,0 +1,23 @@
+<h1>Listing escapetunnels</h1>
+
+<table>
+  <tr>
+    <th>Rate</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @escapetunnels.each do |escapetunnel| %>
+  <tr>
+    <td><%= escapetunnel.rate %></td>
+    <td><%= link_to 'Show', escapetunnel %></td>
+    <td><%= link_to 'Edit', edit_escapetunnel_path(escapetunnel) %></td>
+    <td><%= link_to 'Destroy', escapetunnel, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Escapetunnel', new_escapetunnel_path %>

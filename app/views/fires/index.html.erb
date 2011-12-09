@@ -1,0 +1,27 @@
+<h1>Listing fires</h1>
+
+<table>
+  <tr>
+    <th>Dmg</th>
+    <th>Rate</th>
+    <th>Boni</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @fires.each do |fire| %>
+  <tr>
+    <td><%= fire.dmg %></td>
+    <td><%= fire.rate %></td>
+    <td><%= fire.boni %></td>
+    <td><%= link_to 'Show', fire %></td>
+    <td><%= link_to 'Edit', edit_fire_path(fire) %></td>
+    <td><%= link_to 'Destroy', fire, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Fire', new_fire_path %>

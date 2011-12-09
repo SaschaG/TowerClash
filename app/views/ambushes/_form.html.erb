@@ -1,0 +1,17 @@
+<%= form_for(@ambush) do |f| %>
+  <% if @ambush.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ambush.errors.count, "error") %> prohibited this ambush from being saved:</h2>
+
+      <ul>
+      <% @ambush.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

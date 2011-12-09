@@ -1,2 +1,30 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<table>
+  <tr>
+	<td width="500px" >
+      <h1>Towerclash</h1>
+      Spiele jetzt <b> KOSTENLOS </b> und werde der Herrscher über einen der legänderen magischen Türme!
+      Du hast die Macht deine Feinde mit magischen Angriffen und riesigen Armeen zu zerschmettern!
+      <br>Erobere andere Türme und vergrößere dein Reich!
+	</td>
+  <td class="sidebar round">   
+    <h3>Anmelden</h3>
+  	  <% if signed_in? %>
+	    Hey! <br/>
+	  	Du bist schon eingeloggt<br />
+	  	<%= link_to "Dein Profil", current_user %>
+	  <% else %>
+	    <%= form_for("user", :url => user_session_path) do |f| %>
+		Email:   
+  		<%= f.text_field :email %><br>
+  		Passwort:
+  		<%= f.password_field :password %><br>
+  		<%= f.check_box :remember_me %> angemeldet bleiben<br>
+  		<%= f.submit 'Einloggen' %> <br/>
+  		<%= link_to "Passwort vergessen?", new_password_path('user') %><br/><br/>
+	  <% end %>
+	<% end %>
+    </td>
+  </tr>
+</table>
+
+

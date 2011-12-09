@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Dmg:</b>
+  <%= @earth.dmg %>
+</p>
+
+<p>
+  <b>Rate:</b>
+  <%= @earth.rate %>
+</p>
+
+<p>
+  <b>Boni:</b>
+  <%= @earth.boni %>
+</p>
+
+
+<%= link_to 'Edit', edit_earth_path(@earth) %> |
+<%= link_to 'Back', earths_path %>

@@ -1,0 +1,23 @@
+<h1>Listing traps</h1>
+
+<table>
+  <tr>
+    <th>Dmg</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @traps.each do |trap| %>
+  <tr>
+    <td><%= trap.dmg %></td>
+    <td><%= link_to 'Show', trap %></td>
+    <td><%= link_to 'Edit', edit_trap_path(trap) %></td>
+    <td><%= link_to 'Destroy', trap, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Trap', new_trap_path %>

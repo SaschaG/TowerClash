@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Dmg:</b>
+  <%= @ice.dmg %>
+</p>
+
+<p>
+  <b>Rate:</b>
+  <%= @ice.rate %>
+</p>
+
+<p>
+  <b>Boni:</b>
+  <%= @ice.boni %>
+</p>
+
+
+<%= link_to 'Edit', edit_ice_path(@ice) %> |
+<%= link_to 'Back', ices_path %>

@@ -3,21 +3,35 @@
 <head>
   <title>Towerclash</title>
   <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tags %>
 </head>
 <body>
   <div class = "main">
     <nav class = "round">
-      qwqewq
+      <%= render 'devise/menu/login_items' %>
+      <%= render 'devise/menu/registration_items' %>
+      <% if user_signed_in? %>
+      <li> <%= link_to('Türme', towers_path) %></li>
+      <% else %>
+      
+      <% end %>
     </nav>
     
 	<section>
+	  <p style="color: green"><%= notice %></p>
+      <p style="color: red"><%= alert %></p>
   	  <%= yield %>
   	</section>
   
     <nav class = "round">
-      qwqewq
+      <% if user_signed_in? %>
+      Gold <br>
+      Essen <br>
+      USW <br>
+      <% else %>
+        hahaha
+      <% end %>
     </nav>
   
   </div>

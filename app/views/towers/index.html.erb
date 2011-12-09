@@ -1,0 +1,16 @@
+<h1>All deine Türme</h1>
+
+<table>
+  <tr>
+    <th>Turm</th>
+  </tr>
+
+<% @towers.each do |tower| %>
+  <tr>
+    <td><%= link_to tower.name + '(' + tower.x.to_s + '/' + tower.y.to_s + ')' , tower %></td>
+  </tr>
+<% end %>
+</table>
+
+
+

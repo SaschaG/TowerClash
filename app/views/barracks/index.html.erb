@@ -1,0 +1,23 @@
+<h1>Listing barracks</h1>
+
+<table>
+  <tr>
+    <th>Rate</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @barracks.each do |barrack| %>
+  <tr>
+    <td><%= barrack.rate %></td>
+    <td><%= link_to 'Show', barrack %></td>
+    <td><%= link_to 'Edit', edit_barrack_path(barrack) %></td>
+    <td><%= link_to 'Destroy', barrack, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Barrack', new_barrack_path %>

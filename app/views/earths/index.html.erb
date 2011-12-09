@@ -1,0 +1,27 @@
+<h1>Listing earths</h1>
+
+<table>
+  <tr>
+    <th>Dmg</th>
+    <th>Rate</th>
+    <th>Boni</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @earths.each do |earth| %>
+  <tr>
+    <td><%= earth.dmg %></td>
+    <td><%= earth.rate %></td>
+    <td><%= earth.boni %></td>
+    <td><%= link_to 'Show', earth %></td>
+    <td><%= link_to 'Edit', edit_earth_path(earth) %></td>
+    <td><%= link_to 'Destroy', earth, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Earth', new_earth_path %>

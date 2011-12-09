@@ -1,0 +1,27 @@
+<h1>Listing ices</h1>
+
+<table>
+  <tr>
+    <th>Dmg</th>
+    <th>Rate</th>
+    <th>Boni</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ices.each do |ice| %>
+  <tr>
+    <td><%= ice.dmg %></td>
+    <td><%= ice.rate %></td>
+    <td><%= ice.boni %></td>
+    <td><%= link_to 'Show', ice %></td>
+    <td><%= link_to 'Edit', edit_ice_path(ice) %></td>
+    <td><%= link_to 'Destroy', ice, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ice', new_ice_path %>

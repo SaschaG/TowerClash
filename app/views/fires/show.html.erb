@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Dmg:</b>
+  <%= @fire.dmg %>
+</p>
+
+<p>
+  <b>Rate:</b>
+  <%= @fire.rate %>
+</p>
+
+<p>
+  <b>Boni:</b>
+  <%= @fire.boni %>
+</p>
+
+
+<%= link_to 'Edit', edit_fire_path(@fire) %> |
+<%= link_to 'Back', fires_path %>
