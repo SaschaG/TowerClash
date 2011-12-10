@@ -4,6 +4,13 @@ class CreateIces < ActiveRecord::Migration
       t.integer :dmg
       t.integer :rate
       t.integer :boni
+      t.integer :gold
+      t.integer :christals
+      t.integer :stone
+      t.integer :wood
+      t.integer :iron
+      t.integer :time
+      
 
       t.timestamps
     end

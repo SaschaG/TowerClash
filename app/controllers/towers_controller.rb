@@ -132,7 +132,8 @@ class TowersController < ApplicationController
 	
 	#User_id wird zugewiesen
 	@tower.user_id = current_user.id
-	
+	@tower.down2 = 'store 1'
+
 	
 	
 	
@@ -183,4 +184,23 @@ class TowersController < ApplicationController
       format.json { head :ok }
     end
   end
+  
+  
+  
+  #Aufsetzen der Bauoptionen
+  def upgrade_hq
+    @village = Village.find(params[:id])
+    if @village.wood >= Hq.find(@village.hq_id).woodcost && @village.stone >= Hq.find(@village.hq_id).stonecost && @village.iron >= Hq.find(@village.hq_id).ironcost
+    @village.upgrade_hq
+    flash[:notice] = "Upgrading"
+    redirect_to village_url(@village)
+    else
+    flash[:notice] = "Nicht genügend Rohstoffe!"
+    redirect_to village_url(@village)
+    end
+  end
+  
+  
+  
+  
 end

@@ -10,12 +10,79 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111208155558) do
+ActiveRecord::Schema.define(:version => 20111209223348) do
+
+  create_table "airs", :force => true do |t|
+    t.integer  "dmg"
+    t.integer  "rate"
+    t.integer  "boni"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ambushes", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "barracks", :force => true do |t|
+    t.integer  "rate"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "coordinates", :force => true do |t|
     t.integer  "user_id"
     t.integer  "x"
     t.integer  "y"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "doctors", :force => true do |t|
+    t.integer  "rate"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "earths", :force => true do |t|
+    t.integer  "dmg"
+    t.integer  "rate"
+    t.integer  "boni"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "escapetunnels", :force => true do |t|
+    t.integer  "rate"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "factories", :force => true do |t|
+    t.integer  "rate"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "fires", :force => true do |t|
+    t.integer  "dmg"
+    t.integer  "rate"
+    t.integer  "boni"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ices", :force => true do |t|
+    t.integer  "dmg"
+    t.integer  "rate"
+    t.integer  "boni"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "labs", :force => true do |t|
+    t.integer  "speed"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -32,6 +99,12 @@ ActiveRecord::Schema.define(:version => 20111208155558) do
   add_index "slugs", ["name", "sluggable_type", "sequence", "scope"], :name => "index_slugs_on_n_s_s_and_s", :unique => true
   add_index "slugs", ["sluggable_id"], :name => "index_slugs_on_sluggable_id"
 
+  create_table "stores", :force => true do |t|
+    t.integer  "volume"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "towers", :force => true do |t|
     t.string   "name"
     t.integer  "x"
@@ -39,6 +112,21 @@ ActiveRecord::Schema.define(:version => 20111208155558) do
     t.integer  "user_id"
     t.integer  "points"
     t.string   "position"
+    t.string   "space1"
+    t.string   "space2"
+    t.string   "space3"
+    t.string   "space4"
+    t.string   "space5"
+    t.string   "down1"
+    t.string   "down2"
+    t.string   "down3"
+    t.string   "wall"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "traps", :force => true do |t|
+    t.integer  "dmg"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -34,11 +34,11 @@ Towerclash::Application.routes.draw do
   root :to => 'pages#home'
   
   
-   match "coordinates/map" => 'coordinates#map', :controller => 'coordinates' 
+  match "coordinates/map" => 'coordinates#map', :controller => 'coordinates' 
   match "coordinates/up_to_top" => 'coordinates#up_to_top', :controller => 'coordinates', :action => 'up_to_top'
   match "coordinates/up_to_bottom" => 'coordinates#up_to_bottom', :controller => 'coordinates', :action => 'up_to_bottom'
   match "coordinates/up_to_right" => 'coordinates#up_to_right', :controller => 'coordinates', :action => 'up_to_right'
   match "coordinates/up_to_left" => 'coordinates#up_to_left', :controller => 'coordinates', :action => 'up_to_left'
-
+  match "towers/built_fire" => 'towers#built_fire', :controller => 'towers', :action => 'built_fire'
  
 end
