@@ -39,6 +39,6 @@ Towerclash::Application.routes.draw do
   match "coordinates/up_to_bottom" => 'coordinates#up_to_bottom', :controller => 'coordinates', :action => 'up_to_bottom'
   match "coordinates/up_to_right" => 'coordinates#up_to_right', :controller => 'coordinates', :action => 'up_to_right'
   match "coordinates/up_to_left" => 'coordinates#up_to_left', :controller => 'coordinates', :action => 'up_to_left'
-  match "towers/built_fire" => 'towers#built_fire', :controller => 'towers', :action => 'built_fire'
+  match "towers/:id/built" => 'towers#built', :controller => 'towers', :action => 'built'
  
 end

@@ -6,6 +6,12 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.rememberable
       t.trackable
       t.string :name
+      t.integer :wall
+      t.integer :wood
+      t.integer :iron
+      t.integer :gold
+      t.integer :stone
+      t.integer :christals
 
       # t.encryptable
       # t.confirmable

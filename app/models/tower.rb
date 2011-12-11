@@ -13,4 +13,9 @@ has_many :stores
 has_many :traps
 has_many :ambush
 has_many :escapetunnel
+
+  def build(*arg)
+  arg.split(',')
+    update_attribute( arg[0] , arg[1])
+  end
 end

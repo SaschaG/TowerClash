@@ -15,7 +15,7 @@ class CreateTowers < ActiveRecord::Migration
       t.string :down1
       t.string :down2
       t.string :down3
-      t.string :wall
+      
 
       t.timestamps
     end

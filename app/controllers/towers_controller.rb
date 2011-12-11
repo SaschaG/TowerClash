@@ -188,15 +188,21 @@ class TowersController < ApplicationController
   
   
   #Aufsetzen der Bauoptionen
-  def upgrade_hq
-    @village = Village.find(params[:id])
-    if @village.wood >= Hq.find(@village.hq_id).woodcost && @village.stone >= Hq.find(@village.hq_id).stonecost && @village.iron >= Hq.find(@village.hq_id).ironcost
-    @village.upgrade_hq
-    flash[:notice] = "Upgrading"
-    redirect_to village_url(@village)
+  def built
+    @user = current_user
+    @tower = Tower.find(params[:id])
+    if @user.wood >= Fire.find(1).wood && @user.stone >= Fire.find(1).stone &&
+       @user.christals >= Fire.find(1).christals && @user.iron >= Fire.find(1).iron
+       @user.gold >= Fire.find(1).gold
+    p = params[:place]
+    b = params[:building]
+    @tower.build(p,b)
+    flash[:notice] = "Wird gebaut!"
+    flash[:notice] = p
+    redirect_to tower_url(@tower)
     else
     flash[:notice] = "Nicht genügend Rohstoffe!"
-    redirect_to village_url(@village)
+    redirect_to tower_url(@tower)
     end
   end
   

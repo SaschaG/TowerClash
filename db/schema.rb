@@ -16,17 +16,36 @@ ActiveRecord::Schema.define(:version => 20111209223348) do
     t.integer  "dmg"
     t.integer  "rate"
     t.integer  "boni"
+    t.integer  "gold"
+    t.integer  "christals"
+    t.integer  "stone"
+    t.integer  "wood"
+    t.integer  "iron"
+    t.integer  "time"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "ambushes", :force => true do |t|
+    t.integer  "rate"
+    t.integer  "gold"
+    t.integer  "christals"
+    t.integer  "stone"
+    t.integer  "wood"
+    t.integer  "iron"
+    t.integer  "time"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "barracks", :force => true do |t|
     t.integer  "rate"
+    t.integer  "gold"
+    t.integer  "christals"
+    t.integer  "stone"
+    t.integer  "wood"
+    t.integer  "iron"
+    t.integer  "time"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -41,6 +60,12 @@ ActiveRecord::Schema.define(:version => 20111209223348) do
 
   create_table "doctors", :force => true do |t|
     t.integer  "rate"
+    t.integer  "gold"
+    t.integer  "christals"
+    t.integer  "stone"
+    t.integer  "wood"
+    t.integer  "iron"
+    t.integer  "time"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -49,18 +74,36 @@ ActiveRecord::Schema.define(:version => 20111209223348) do
     t.integer  "dmg"
     t.integer  "rate"
     t.integer  "boni"
+    t.integer  "gold"
+    t.integer  "christals"
+    t.integer  "stone"
+    t.integer  "wood"
+    t.integer  "iron"
+    t.integer  "time"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "escapetunnels", :force => true do |t|
     t.integer  "rate"
+    t.integer  "gold"
+    t.integer  "christals"
+    t.integer  "stone"
+    t.integer  "wood"
+    t.integer  "iron"
+    t.integer  "time"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "factories", :force => true do |t|
     t.integer  "rate"
+    t.integer  "gold"
+    t.integer  "christals"
+    t.integer  "stone"
+    t.integer  "wood"
+    t.integer  "iron"
+    t.integer  "time"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -69,6 +112,12 @@ ActiveRecord::Schema.define(:version => 20111209223348) do
     t.integer  "dmg"
     t.integer  "rate"
     t.integer  "boni"
+    t.integer  "gold"
+    t.integer  "christals"
+    t.integer  "stone"
+    t.integer  "wood"
+    t.integer  "iron"
+    t.integer  "time"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -77,12 +126,24 @@ ActiveRecord::Schema.define(:version => 20111209223348) do
     t.integer  "dmg"
     t.integer  "rate"
     t.integer  "boni"
+    t.integer  "gold"
+    t.integer  "christals"
+    t.integer  "stone"
+    t.integer  "wood"
+    t.integer  "iron"
+    t.integer  "time"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "labs", :force => true do |t|
     t.integer  "speed"
+    t.integer  "gold"
+    t.integer  "christals"
+    t.integer  "stone"
+    t.integer  "wood"
+    t.integer  "iron"
+    t.integer  "time"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -101,6 +162,12 @@ ActiveRecord::Schema.define(:version => 20111209223348) do
 
   create_table "stores", :force => true do |t|
     t.integer  "volume"
+    t.integer  "gold"
+    t.integer  "christals"
+    t.integer  "stone"
+    t.integer  "wood"
+    t.integer  "iron"
+    t.integer  "time"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -120,13 +187,18 @@ ActiveRecord::Schema.define(:version => 20111209223348) do
     t.string   "down1"
     t.string   "down2"
     t.string   "down3"
-    t.string   "wall"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "traps", :force => true do |t|
     t.integer  "dmg"
+    t.integer  "gold"
+    t.integer  "christals"
+    t.integer  "stone"
+    t.integer  "wood"
+    t.integer  "iron"
+    t.integer  "time"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -143,6 +215,12 @@ ActiveRecord::Schema.define(:version => 20111209223348) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.string   "name"
+    t.integer  "wall"
+    t.integer  "wood"
+    t.integer  "iron"
+    t.integer  "gold"
+    t.integer  "stone"
+    t.integer  "christals"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
